@@ -8,6 +8,7 @@ ApiHelper.prototype.validate = async function (request, description, onFailed) {
         let props = description[i];
         try {
             let links = props['link'].split('/');
+            console.log(links);
             if (links.length != 0) {
                 let data = request[links[0]];
                 if (data != undefined) {
@@ -40,6 +41,9 @@ ApiHelper.prototype.validate = async function (request, description, onFailed) {
                         }
                     }
                 }
+                else {
+                    throw "not found";
+                }
             }
             else {
                 throw "not found";
@@ -56,6 +60,7 @@ ApiHelper.prototype.validate = async function (request, description, onFailed) {
             }
             message = e;
             break;
+
         }
     }
     return { status: isValid, message: message };

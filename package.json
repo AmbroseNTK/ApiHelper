@@ -1,11 +1,11 @@
 {
-  "name": "apihelper",
+  "name": "ambrosentk-api-helper",
   "version": "1.0.0",
   "description": "",
   "main": "helper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "AmbroseNTK",
+  "author": "ambrosentk",
   "license": "ISC"
 }
